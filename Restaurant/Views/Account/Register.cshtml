@@ -1,0 +1,37 @@
+﻿@model RegisterViewModel
+
+<div class="container">
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" for="exampleFormControlInput1" class="form-label">Name</label>
+            <input asp-for="Name" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Surname" for="exampleFormControlInput2" class="form-label">Surname</label>
+            <input asp-for="Surname" type="text" class="form-control" id="exampleFormControlInput2" placeholder="Enter surname">
+            <span asp-validation-for="Surname" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Username" for="exampleFormControlInput3" class="form-label">Username</label>
+            <input asp-for="Username" class="form-control" id="exampleFormControlInput3" placeholder="Enter Username">
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Email" for="exampleFormControlInput4" class="form-label">Email</label>
+            <input asp-for="Email" class="form-control" id="exampleFormControlInput4" placeholder="Enter Email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Password" for="exampleFormControlInput5" class="form-label">Password</label>
+            <input asp-for="Password" type="password" class="form-control" id="exampleFormControlInput5" placeholder="Enter Password">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="ConfirmPassword" for="exampleFormControlInput6" class="form-label">ConfirmPassword</label>
+            <input asp-for="ConfirmPassword" type="password" class="form-control" id="exampleFormControlInput6" placeholder="Confirm Password">
+            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success">Register</button>
+    </form>
+</div>

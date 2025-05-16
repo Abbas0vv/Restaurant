@@ -1,0 +1,33 @@
+﻿@model ChefViewModel
+
+<div class="container mt-5">
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label asp-for="Name" for="exampleFormControlInput1" class="form-label">Name</label>
+            <input asp-for="Name" type="text" class="form-control" id="exampleFormControlInput1" value=@Model.Name>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Surname" for="exampleFormControlInput1" class="form-label">Surname</label>
+            <input asp-for="Surname" type="text" class="form-control" id="exampleFormControlInput1" value=@Model.Surname>
+            <span asp-validation-for="Surname" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Designation" for="exampleFormControlInput1" class="form-label">Designation</label>
+            <textarea asp-for="Designation" class="form-control" id="exampleFormControlTextarea1" rows="3" value="">@Model.Designation</textarea>
+            <span asp-validation-for="Designation" class="text-danger"></span>
+        </div>
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+            </div>
+            <div class="custom-file">
+                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                <input asp-for="File" type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" value=@Model.File>
+                <span asp-validation-for="File" class="text-danger"></span>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Back To Dashboard</a>
+    </form>
+</div>
