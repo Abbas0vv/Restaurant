@@ -32,7 +32,7 @@ public class ChefRepository : IChefRepository
         return _context.Chefs.FirstOrDefault(c => c.Id == id);
     }
 
-    public void Insert(ChefViewModel model)
+    public void Insert(CreateChefViewModel model)
     {
         var chef = new Chef()
         {
@@ -46,7 +46,7 @@ public class ChefRepository : IChefRepository
         _context.SaveChanges();
     }
 
-    public void Update(int id, ChefViewModel model)
+    public void Update(int id, UpdateChefViewModel model)
     {
         var chef = GetById(id);
         if (chef is null) return;

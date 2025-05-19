@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Restaurant.Database.ViewModels;
 
-public class ChefViewModel
+public class UpdateChefViewModel
 {
     [MinLength(3)]
     public string Name { get; set; }

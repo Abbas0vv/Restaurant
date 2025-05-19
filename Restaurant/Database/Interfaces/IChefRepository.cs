@@ -8,7 +8,7 @@ public interface IChefRepository
     public List<Chef> GetAll();
     public List<Chef> GetSome(int value);
     public Chef GetById(int id);
-    public void Insert(ChefViewModel model);
-    public void Update(int id, ChefViewModel model);
+    public void Insert(CreateChefViewModel model);
+    public void Update(int id, UpdateChefViewModel model);
     public void Delete(int id);
 }

@@ -29,7 +29,7 @@ public class DashboardController : Controller
     }
 
     [HttpPost]
-    public IActionResult Create(ChefViewModel model)
+    public IActionResult Create(CreateChefViewModel model)
     {
         if (!ModelState.IsValid) return View(model);
 
@@ -41,7 +41,7 @@ public class DashboardController : Controller
     public IActionResult Update(int id)
     {
         var chef = _chefRepository.GetById(id);
-        var viewModel = new ChefViewModel()
+        var viewModel = new UpdateChefViewModel()
         {
             Name = chef.Name,
             Surname = chef.Surname,
@@ -51,7 +51,7 @@ public class DashboardController : Controller
     }
 
     [HttpPost]
-    public IActionResult Update(int id, ChefViewModel model)
+    public IActionResult Update(int id, UpdateChefViewModel model)
     {
         if (!ModelState.IsValid) return View(model);
 
