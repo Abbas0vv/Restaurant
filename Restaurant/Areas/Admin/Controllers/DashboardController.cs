@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Restaurant.Database.Interfaces;
 using Restaurant.Database.Repositories;
 using Restaurant.Database.ViewModels;
@@ -6,6 +7,7 @@ using Restaurant.Database.ViewModels;
 namespace Restaurant.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin")]
 public class DashboardController : Controller
 {
     private readonly IChefRepository _chefRepository;

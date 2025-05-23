@@ -5,7 +5,7 @@ using Restaurant.Database.Models.Account;
 
 namespace Restaurant.Database;
 
-public class RestaurantDbContext : IdentityDbContext<AppUser, AppRole, int>
+public class RestaurantDbContext : IdentityDbContext<AppUser>
 {
     public RestaurantDbContext(DbContextOptions options) : base(options) { }
 
